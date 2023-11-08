@@ -1,0 +1,100 @@
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+.header {
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 36px;
+  margin: 0;
+}
+
+.header h2, .header p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.content {
+  margin: 20px;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+h1, h2, h3 {
+  margin: 0 0 20px;
+}
+
+h1 {
+  font-size: 32px;
+  color: #333;
+}
+
+h2 {
+  font-size: 28px;
+  color: #444;
+}
+
+h3 {
+  font-size: 22px;
+  color: #555;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.social-icon {
+  color: black;
+  transition: color 0.2s;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 30px;
+}
+
+.social-icon:hover {
+  color: #007bff;
+}
+
+.visitor-counter {
+  font-weight: bold;
+  font-size: 100px;;
+  color: #777;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  border: 1px solid black;
+  padding: 5px;
+}
+
+th {
+  background-color: #ccc;
+}
