@@ -21,7 +21,6 @@ jobs:
       run: |
         cd crc-sam/get-function
         python -m pytest test_get_function
-        cd ../..  
 
     - name: Test put function
       run: |
