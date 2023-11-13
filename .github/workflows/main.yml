@@ -20,10 +20,10 @@ jobs:
     - name: Test get function
       run: |
         cd crc-sam/get-function
-        python -m pytest test_get_function
+        python -m test_get_function
         cd ../..  
 
     - name: Test put function
       run: |
         cd crc-sam/put-function
-        python -m pytest test_put_function
+        python -m test_put_function
