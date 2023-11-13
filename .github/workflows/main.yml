@@ -13,7 +13,9 @@ jobs:
         
     - name: Install dependencies
       run: |
+        cd crc-sam/get-function
         python -m pip install --upgrade pip
+        pip install -r requirements.txt
 
     - name: Test get function
       run: |
