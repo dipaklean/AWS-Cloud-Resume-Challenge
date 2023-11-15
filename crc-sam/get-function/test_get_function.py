@@ -1,5 +1,10 @@
 import unittest
+import os
+import boto3
+
 from app import lambda_handler
+
+os.environ['AWS_DEFAULT_REGION'] = 'ap-southeast-2'
 
 class app(unittest.TestCase):
 
