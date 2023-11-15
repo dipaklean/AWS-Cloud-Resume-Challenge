@@ -19,6 +19,7 @@ jobs:
 
     - name: Test get function
       run: |
+        cd crc-sam/get-function
         pwd
         ls
         python -m pytest test_get_function.py
