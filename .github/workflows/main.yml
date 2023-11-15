@@ -19,7 +19,6 @@ jobs:
 
     - name: Test get function
       run: |
-        cd crc-sam/get-function
         python -m pytest test_get_function
 
     - name: Test put function
