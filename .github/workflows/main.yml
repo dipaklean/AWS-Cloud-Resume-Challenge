@@ -22,9 +22,9 @@ jobs:
         cd crc-sam/get-function
         pwd
         ls
-        python -m pytest test_get_function.py
+        python3 test_get_function.py
 
     - name: Test put function
       run: |
         cd crc-sam/put-function
-        python -m pytest test_put_function
+        python3 test_put_function
