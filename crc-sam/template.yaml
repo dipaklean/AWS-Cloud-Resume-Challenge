@@ -59,9 +59,9 @@ Resources:
         DefaultCacheBehavior:
           ViewerProtocolPolicy: redirect-to-https
           TargetOriginId: dl-cloudresume.s3.ap-southeast-2.amazonaws.com
-          DefaultTTL: 60
-          MinTTL: 60
-          MaxTTL: 60
+          DefaultTTL: 3600
+          MinTTL: 1
+          MaxTTL: 86400
           ForwardedValues:
             QueryString: false
         Origins:

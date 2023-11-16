@@ -29,3 +29,22 @@ jobs:
         working-directory: crc-sam
       - run: sam deploy --no-confirm-changeset --no-fail-on-empty-changeset
         working-directory: crc-sam
+
+  upload-website-to-s3:
+    runs-on: ubuntu-latest
+    # These permissions are needed to interact with GitHub’s OIDC Token endpoint.
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-region: ${{ secrets.AWS_REGION }}
+          role-to-assume: ${{ secrets.AWS_ROLE }}
+          role-session-name: CrcGitHubActions
+      - name: Copy files to the production website with the AWS CLI
+        run: |
+          aws s3 sync ./website s3://dl-cloudresume
