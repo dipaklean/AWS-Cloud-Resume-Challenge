@@ -48,3 +48,10 @@ jobs:
       - name: Copy files to the production website with the AWS CLI
         run: |
           aws s3 sync ./website s3://dl-cloudresume
+
+  integration-test-backend:
+    needs: build-and-deploy-infrastructure
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: cd crc-sam && make integration-test
