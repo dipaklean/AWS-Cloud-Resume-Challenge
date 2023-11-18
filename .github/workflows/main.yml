@@ -55,3 +55,13 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: cd crc-sam && make integration-test
+
+  end-to-end-test:
+    needs: integration-test-backend
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14
+      - run: cd crc-sam/tests/end-to-end-test && npm install && node index.js
