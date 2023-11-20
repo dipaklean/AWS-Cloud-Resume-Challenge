@@ -2,7 +2,7 @@ version = 0.1
 
 [default]
 [default.global.parameters]
-stack_name = "crc-sam"
+stack_name = "crc-dev"
 
 [default.build.parameters]
 cached = true
