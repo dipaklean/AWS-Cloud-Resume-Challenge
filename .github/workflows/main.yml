@@ -45,7 +45,7 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
           role-to-assume: ${{ secrets.AWS_ROLE }}
           role-session-name: CrcGitHubActions
-      - name: Copy files to the production website with the AWS CLI
+      - name: Copy files to S3 bucket
         run: |
           aws s3 sync ./website s3://dl-cloudresume
 

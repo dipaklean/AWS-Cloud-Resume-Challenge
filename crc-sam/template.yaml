@@ -74,7 +74,7 @@ Resources:
         Enabled: true
         DefaultRootObject: index.html
         ViewerCertificate:
-            AcmCertificateArn: arn:aws:acm:us-east-1:405122375247:certificate/010549e4-3382-46a2-ad60-f1186bddc34a
+            AcmCertificateArn: arn:aws:acm:us-east-1:<<ACCOUNT_NR>>:certificate/<<CERT_NR>>
             SslSupportMethod: sni-only
 
   MyRoute53Record:
